@@ -1,0 +1,61 @@
+.drum-machine {
+  @apply p-5 h-auto w-1/2 box-border;
+  @media (max-width: 767px) {
+    @apply w-2/3 py-2;
+  }
+
+  .drum-machine-inner {
+    @apply rounded-lg border-solid p-5 h-auto;
+  
+    background: linear-gradient(
+  -45deg, #101010, #1c1b1b, #2a2a2a, #323232);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    border-width: 1px;
+    border-top-color: #555;
+    border-left-color: #333;
+    border-right-color: #333;
+    border-bottom-color: #222;
+    box-shadow: 1px 1px 5px #000;
+  }
+
+  .drum-pads {
+    @apply w-full grid grid-cols-3 grid-rows-3 gap-3 select-none;
+  }
+
+  .display {
+    background-color: #000;
+    @media (max-width: 767px) {
+      @apply h-5 mb-2;
+    }
+    @apply w-full text-white h-10 mb-5 rounded-lg text-center;
+    span.animate {
+      animation: ping 0.75s cubic-bezier(0, 0.7, 0.85, 1) 1;
+      display: block,
+    }
+  }
+}
+
+
+@keyframes ping {
+  0% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}

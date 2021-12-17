@@ -1,0 +1,77 @@
+.drum-pad {
+  @apply relative cursor-pointer rounded-lg;
+  padding-top: 105%;
+  font-size: 2.75em;
+  border: 1px solid #012;
+  box-shadow: 1px 2px 2px #000;
+  text-shadow: 0px 4px 8px #000;
+  transition: all 0.5s ease-in-out;
+
+  .drum-pad-inner {
+    @apply absolute left-0 w-full h-full flex items-center justify-center;
+    bottom: 10%;
+    font-family: "Righteous", cursive;    
+  }
+
+  .name {
+    font-size: 0.25em;
+    @apply rounded-b-lg absolute bottom-0 block bg-white w-full opacity-30 text-center text-black;
+  }
+
+  &:active, &.active {
+    background-color: #152535;
+    box-shadow: inset 1px 2px 2px #000;
+    .name {
+      opacity: 0.50;      
+    }
+  }
+
+  &.color1 {
+    color: #fff;
+    background: radial-gradient(#b00, #300);
+    &.active {
+      background: radial-gradient(#e00, #700);
+    }
+  }
+  
+  &.color2 {
+    color: #fff;
+    background: radial-gradient(#0b0, #030);
+    &.active {
+      background: radial-gradient(#0e0, #070);
+    }
+  }
+
+  &.color3 {
+    color: #fff;
+    background: radial-gradient(#00b, #003);
+    &.active {
+      background: radial-gradient(#00f, #007);
+    }
+  }
+
+  &.color4 {
+    color: #fff;
+    background: radial-gradient(#0bb, #033);
+    &.active {
+      background: radial-gradient(#0ff, #077);
+    }
+  }
+
+  &.color5 {
+    color: #fff;
+    background: radial-gradient(rgb(177, 16, 177), rgb(122, 21, 122));
+    &.active {
+      background: radial-gradient(#f0f, #707);
+    }
+  }
+
+  &.color6 {
+    color: #fff;
+    background: radial-gradient(rgb(221, 169, 0), rgb(85, 69, 0));
+    &.active {
+      background: radial-gradient(rgb(255, 174, 0), rgb(119, 81, 0));
+    }
+  }    
+
+}
